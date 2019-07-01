@@ -42,10 +42,9 @@ public class Main {
         int irisTypeTreino = 0;
         int acertos = 0;
         //Percorre os 30 primeiros da lista
-        for (int x = 0; x < 30; x++){
+        for (int x = 0; x < 150; x++){
             //Percorre os 150 da lista
             for (int y  = 0; y < list.size(); y ++){
-                if (!list.get(x).equals(list.get(y))){
                     //Chama a função calculaDistancia e pega o valor da distancia
                     distanciaAux = calculaDistancia(list.get(x), list.get(y));
                     if (distanciaAux <= distancia){
@@ -53,7 +52,6 @@ public class Main {
                         irisTypeBase = Integer.parseInt(list.get(y).substring(list.get(y).length()-1));
                         irisTypeTreino = Integer.parseInt(list.get(x).substring(list.get(x).length()-1));
                         distancia = distanciaAux;
-                    }
                 }
             }
             //Se tipos das iris forem iguais soma + 1 acerto
@@ -62,6 +60,7 @@ public class Main {
             }
             //Soma o tipo da iris na matriz de confusão
             matrizConfusao[irisTypeTreino][irisTypeBase] ++;
+            x = x + 4;
         }
 
         //Imprime a matriz de confusão
