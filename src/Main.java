@@ -68,6 +68,8 @@ public class Main {
         System.out.println(matrizConfusao[1][0] + " " + matrizConfusao[1][1] + " " + matrizConfusao[1][2]);
         System.out.println(matrizConfusao[2][0] + " " + matrizConfusao[2][1] + " " + matrizConfusao[2][2]);
         System.out.println("Acertos = " + acertos);
+        double taxaAcerto = (double) (acertos * 100) / 30;
+        System.out.println(taxaAcerto + "%");
 
     }
 
